@@ -1,107 +1,182 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html{
-    font-size: 10px;
+html {
+  font-size: 10px;
 }
 
-body{
-    font-family: 'lato' , sans-serif;
-    font-size: 1.6rem;
-    font-weight: 400;
-    line-height: 1.5;
-    background-color: #fff;
+body {
+  font-family: "lato", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: #535c91;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-    font-family: Montserrat;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  font-family: Montserrat;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
-.clearfix::after{
-    content: " ";
-    display: block;
-    clear: both;
+.clearfix::after {
+  content: " ";
+  display: block;
+  clear: both;
 }
 
-.container{
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: .5rem;
-    padding-right: .5rem;
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
-.text-uppercase{
-    text-transform: uppercase;
+.text-uppercase {
+  text-transform: uppercase;
 }
 
 /* ---nav-bar--- */
 
 nav {
-    background-color: #333;
-    overflow: hidden;
+  background-color: #333;
+  overflow: hidden;
+}
 
-  }
-  
 .topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 1.5rem;
-    text-decoration: none;
-    font-size: 2.4rem;
-    transition: background-color .5s;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 1.5rem;
+  text-decoration: none;
+  font-size: 2.4rem;
+  transition: background-color 0.5s;
 }
 
 .topnav a:hover {
-    background-color: #ddd;
-    color: black;
+  background-color: #ddd;
+  color: black;
 }
 
-.topnav .navbar-left{
-    display: flex;
-    float: right;
-    margin-right: 3rem;
+.topnav .navbar-left {
+  display: flex;
+  float: right;
+  margin-right: 3rem;
 }
-  
+
 .topnav a.active {
-    background-color: #0476aa;
-    color: white;
-    padding: 2rem 5rem;
+  background-color: #0476aa;
+  color: white;
+  padding: 2rem 5rem;
 }
-  
 
 .topnav .icon {
-    display: none;
+  display: none;
 }
 
 @media screen and (max-width: 600px) {
-    .topnav a:not(:first-child) {display: none;}
-    .topnav a.icon {
-      float: right;
-      display: block;
-    }
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
 }
-  
+
 @media screen and (max-width: 600px) {
-    .topnav.responsive {position: relative;}
-    .topnav.responsive a.icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .topnav.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+.feed {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.title-input {
+  margin-top: 100px;
+}
+
+.title {
+  text-transform: uppercase;
+  color: white;
+  font-family: "Montserrat";
+  font-size: 7rem;
+}
+
+.search {
+  width: 50rem;
+  height: 50px;
+  border-radius: 30px;
+  border: solid whitesmoke;
+  text-align: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.search-button {
+  width: 40%;
+  border-radius: 10px;
+  border: none;
+  height: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 25px;
+}
+
+@media screen and (max-width: 600px) {
+  .feed {
+    margin-top: 100px;
+  }
+
+  .title {
+    font-family: "Montserrat";
+    font-size: 5rem;
+  }
+
+  .search {
+    width: 25rem;
+    height: 50px;
+    border-radius: 30px;
+    border: solid whitesmoke;
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  .search-button {
+    width: 24%;
+    border-radius: 10px;
+    border: none;
+    height: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+  }
 }
