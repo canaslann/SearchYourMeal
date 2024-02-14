@@ -13,7 +13,7 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.5;
-  background-color: #535c91;
+  background-color: #03628e;
 }
 
 h1,
@@ -113,6 +113,8 @@ nav {
   }
 }
 
+/* Feed Starts */
+
 .feed {
   display: flex;
   justify-content: center;
@@ -127,7 +129,7 @@ nav {
   text-transform: uppercase;
   color: white;
   font-family: "Montserrat";
-  font-size: 7rem;
+  font-size: 5rem;
 }
 
 .search {
