@@ -27,3 +27,8 @@ function myFunction() {
     x.className = "topnav";
   }
 }
+
+function scrollToSection(sectionId) {
+  var section = document.getElementById(sectionId);
+  section.scrollIntoView({ behavior: "smooth" });
+}

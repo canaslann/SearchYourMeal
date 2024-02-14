@@ -6,6 +6,7 @@
 
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -13,7 +14,6 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.5;
-  background-color: #03628e;
 }
 
 h1,
@@ -64,11 +64,24 @@ nav {
   text-decoration: none;
   font-size: 2.4rem;
   transition: background-color 0.5s;
+  margin-top: 10px;
+  position: relative; /* zıt yönleme işlemi yapabilmek için gereklidir */
+}
+
+.topnav a:hover::before {
+  content: "";
+  position: absolute;
+  bottom: -10px; /* alt çizginin konumunu ayarlayın */
+  left: 50%; /* ortaya yerleştirmek için */
+  transform: translateX(-50%);
+  width: 100%;
+  height: 2px;
+  background-color: white; /* ya da istediğiniz başka bir renk */
+  transition: height 0.3s; /* geçiş efektini ayarlayın */
 }
 
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: #333; /* ya da istediğiniz başka bir renk */
 }
 
 .topnav .navbar-left {
@@ -78,8 +91,8 @@ nav {
 }
 
 .topnav a.active {
-  background-color: #0476aa;
   color: white;
+  margin-bottom: 5px;
   padding: 2rem 5rem;
 }
 
@@ -119,6 +132,8 @@ nav {
   display: flex;
   justify-content: center;
   text-align: center;
+  background-color: #03628e;
+  height: 90vh;
 }
 
 .title-input {
@@ -153,10 +168,6 @@ nav {
 }
 
 @media screen and (max-width: 600px) {
-  .feed {
-    margin-top: 100px;
-  }
-
   .title {
     font-family: "Montserrat";
     font-size: 5rem;
@@ -181,4 +192,12 @@ nav {
     letter-spacing: 2px;
     margin-top: 25px;
   }
+}
+
+/* Random Feed Starts */
+
+.random-feed {
+  background-color: #40a2e3;
+  width: 100%;
+  height: 100vh;
 }

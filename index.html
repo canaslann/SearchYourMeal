@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Search Your Meal</title>
-    <script src="app.js"></script>
+
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
 
@@ -30,36 +30,41 @@
   </head>
   <body>
     <!-- Nav-bar -->
-    <nav>
-      <div class="topnav" id="myTopnav">
-        <a href="" class="active text-uppercase">Search Your Meal</a>
+    <header>
+      <nav class="topnav" id="myTopnav">
+        <a href="#" class="active text-uppercase">Search Your Meal</a>
         <a href="#" class="navbar-left">Search Recipe</a>
-        <a href="#" class="navbar-left">Random Recipe</a>
+        <a href="#random" class="navbar-left">Random Recipe</a>
         <a
           href="javascript:void(0);"
           class="icon navbar-left"
           onclick="myFunction()"
         >
-          <i class="fa fa-bars"></i></a
-        >
-      </div>
-    </nav>
+          <i class="fa fa-bars"></i
+        ></a>
+      </nav>
+    </header>
 
     <!-- Feed Starts -->
 
-    <div class="feed">
-      <div class="title-input">
-        <h1 class="title">Search by Name</h1>
-        <br />
-        <input class="search" type="text" />
-        <br />
-        <button class="search-button">Search</button>
+    <section id="search">
+      <div class="feed">
+        <div class="title-input">
+          <h1 class="title">Search by Name</h1>
+          <br />
+          <input class="search" type="text" />
+          <br />
+          <button class="search-button">Search</button>
+        </div>
       </div>
-    </div>
+    </section>
 
+    <section id="random">
+      <div class="random-feed">
+        <!-- Random Meals will come to this section -->
+      </div>
+    </section>
     <!-- Package -->
     <script src="app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </body>
 </html>
