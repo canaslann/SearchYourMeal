@@ -27,6 +27,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+
+    <link rel="icon" type="image/x-icon" href="img/fav-icon.png">
   </head>
   <body>
     <!-- Nav-bar -->
@@ -49,12 +51,16 @@
 
     <section id="search">
       <div class="feed">
-        <div class="title-input">
+        <div class="title-input card">
           <h1 class="title">Search by Name</h1>
           <br />
-          <input class="search" type="text" placeholder="Search Recipe" />
+          <input type="text" placeholder="Enter Your Recipe Name..." class="input" >
           <br />
-          <button class="search-button">Search</button>
+          <div class="search-btn-box">
+            <button class="search-button">
+              Search<i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -67,6 +73,7 @@
     
     
     <!-- Package -->
+    <script src="https://kit.fontawesome.com/20df13cb09.js" crossorigin="anonymous"></script>
     <script src="app.js"></script>
   </body>
 </html>
