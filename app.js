@@ -1,3 +1,10 @@
+// ---navbar---
+
+function scrollToSection(sectionId) {
+  var section = document.getElementById(sectionId);
+  section.scrollIntoView({ behavior: "smooth" });
+}
+
 // Responsive Navbar
 
 const menuicon = document.querySelector("#bar");
@@ -24,32 +31,21 @@ function closeMenu() {
   }
 }
 
-// fetch api
+// Request for Meals
 
-async function getData() {
-  const options = {
-    method: "GET",
-    headers: {
-      "Access-Control-Allow-Headers": "1",
-    },
-  };
+const searchbutton = document.querySelector(".search-button");
+searchbutton.addEventListener("click", check);
 
-  fetch("https://www.themealdb.com/api/json/v1/1/random.php")
-    .then((res) => res.json())
-    .then((data) =>
-      console.log(
-        data.meals.forEach((element) => {
-          console.log(element);
-        })
-      )
-    );
+function check() {
+  const inputValue = document.querySelector(".input").value; // setting input's value to "inputValue"
+  saveData(inputValue);
 }
 
-getData();
-
-// ---navbar---
-
-function scrollToSection(sectionId) {
-  var section = document.getElementById(sectionId);
-  section.scrollIntoView({ behavior: "smooth" });
+async function saveData(inputvalue) {
+  if (inputvalue !== "") {
+    console.log("succsesfuly saved"); // checked
+    sessionStorage.setItem("searchvalue", inputvalue);
+  } else {
+    console.log("input can not be empty");
+  } // setting to session storage
 }
