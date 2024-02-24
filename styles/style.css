@@ -66,6 +66,11 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 9;
+}
+
+.show {
+  transform: translateY(0);
 }
 
 .nav a {
@@ -104,9 +109,10 @@ a {
   height: 30vh;
   width: auto;
   margin-top: 55px;
+  opacity: 0.9;
 }
 
-@media screen and (max-width: 1130px) {
+@media screen and (max-width: 1133px) {
   .nav a {
     display: none;
   }
@@ -121,26 +127,24 @@ a {
   display: none;
 }
 
-@media screen and (max-width: 686px) {
+@media screen and (max-width: 1133px) {
   .logo {
     height: 25vh;
     width: auto;
   }
-  #bar {
-    display: flex;
-  }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 1133px) {
   .logo {
-    height: 20vh;
+    height: 23vh;
     width: auto;
     margin-right: auto;
-    margin-top: 37px;
+    margin-bottom: 30px;
   }
+
   #bar {
     display: flex;
-    margin-right: 30px;
+    margin-right: 20px;
   }
   .nav {
     height: 9vh;
@@ -190,6 +194,7 @@ a {
   color: #fff;
   text-align: center;
   margin-top: 35px;
+  transition: 0.5s;
 }
 
 /* Feed Starts */
@@ -277,7 +282,7 @@ video {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 30%;
+  width: 100%;
   font-family: inherit;
   font-size: 13px;
   font-weight: 500;
@@ -342,7 +347,7 @@ video {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50%;
+    width: 100%;
     font-family: inherit;
     font-size: 13px;
     font-weight: 500;
