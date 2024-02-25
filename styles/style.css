@@ -545,9 +545,7 @@ hr.style-two {
 
 .container-left {
   background-color: white;
-  height: 70vh;
-  width: 50vh;
-  margin-left: 100px;
+  width: 55vh;
   margin-top: 20px;
   border-radius: 5px;
 }
@@ -575,6 +573,33 @@ hr.style-two {
 
 .ingredients {
   margin-left: 30px;
+  padding-bottom: 1.3rem;
+}
+
+.random-div{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 2rem 25%;
+}
+
+.container-right{
+  background-color: white;
+  width: 80vh;
+  margin-left: 50px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.container-right .recipe{
+  padding: 1.4rem;
+  font-size: 1.4rem;
+}
+
+.container-right .right-title{
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
 }
 
 .random-title h1 {
@@ -587,6 +612,42 @@ hr.style-two {
   text-align: center;
   padding-top: 3rem;
 }
+
+.video-btn{
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.comic-button {
+  display: inline-block;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #e00606;
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px #000;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.comic-button:hover {
+  background-color: #fff;
+  color: #e00606;
+  border: 2px solid #e00606;
+  box-shadow: 5px 5px 0px #e00606;
+}
+
+.comic-button:active {
+  background-color: #fcf414;
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
 
 .random-btn {
   margin-top: 2rem;
