@@ -51,7 +51,7 @@
 
     <!-- Feed Starts -->
 
-    <video autoplay muted loop>
+    <video class="search-bg" autoplay muted loop>
       <source
         src="img/pexels-nicole-michalou-6139292 (2160p).mp4"
         type="video/mp4"
@@ -196,7 +196,45 @@
 
     <section id="random">
       <div class="random-feed">
-        <!-- Random Meals will come to this section -->
+        <video class="random-bg" autoplay muted loop >
+          <source
+            src="img/random-background.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+
+        <div class="card-container">
+          <div class="card u-clearfix">
+            <div class="card-body">
+              <h5 class="card-title">Ultimate Reuben</h5>
+              <span class="card-description subtle"><p>
+                1. Blend all the mousse ingredients together in your food
+                processor until smooth. Add the cacao powder first and, as
+                you blend, have all the ingredients to hand in order to
+                adjust the ratios slightly as the size of avocados and
+                bananas varies so much. The perfect ratio in order to avoid
+                the dish tasting too much of either is to use equal amounts
+                of both.
+                <br />
+              </p>
+
+              <p>
+                2. Taste and add a few drops of stevia if you feel you need
+                more sweetness.
+              </p>
+              </span>
+            </div>
+            <img src="img/dailyrecipe3.jpeg" alt="" class="card-media" />
+          </div>
+          <div class="card-shadow"></div>
+        </div>
+        
+        <div class="random-btn">
+          <button>
+             Random Recipe
+          </button>
+        </div>
       </div>
     </section>
 
@@ -206,5 +244,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="app.js"></script>
+    <script src="searchResults.js"></script>
   </body>
 </html>
