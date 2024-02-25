@@ -17,7 +17,6 @@ async function getData(inputValue) {
 
     const data = await response.json();
 
-    console.log("Meals:");
     data.meals.forEach((meal) => {
       console.log(meal);
     });
