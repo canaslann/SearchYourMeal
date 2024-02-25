@@ -539,55 +539,59 @@ hr.style-two {
   object-fit: cover;
   position: absolute;
   width: 100%;
+  height: 100vh;
   z-index: -1;
 }
 
-.random-div{
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  margin-top: 5rem;
+.container-left {
+  background-color: white;
+  height: 70vh;
+  width: 50vh;
+  margin-left: 100px;
+  margin-top: 20px;
+  border-radius: 5px;
 }
 
-.random-container{
-  padding: 3px;
-  border-radius: 3px;
-  width: 80%;
-  background-color: #fff;
+.random-image {
+  height: calc(13 * 1.2rem);
+  padding: 1.2rem 1.2rem 0;
+  position: relative;
 }
 
-.random-container .picture{
-  background-color: red;
-  width: 40%;
-  height: 50rem;
-  margin-right: auto;
-  float: left;
-}
-
-.random-container .picture img{
+.random-image img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
-.random-container .recipe{
-  margin-left: auto; 
+.container-left-title {
   text-align: center;
+  padding-top: 5px;
+  text-transform: uppercase;
+  font-family: "Lato";
+  letter-spacing: 3px;
 }
 
+.ingredients {
+  margin-left: 30px;
+}
 
-.random-title h1{
+.random-title h1 {
   font-size: 4rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  font-family: 'Lato',sans-serif;
+  font-family: "Lato", sans-serif;
   display: flex;
   justify-content: center;
   text-align: center;
   padding-top: 3rem;
 }
 
-.random-btn{
-  margin-left: 45%;
+.random-btn {
   margin-top: 2rem;
+  display: flex;
+  justify-content: center;
 }
 
 .random-btn button {
@@ -609,15 +613,17 @@ hr.style-two {
   padding: 16px 24px 16px 28px;
   transform: translate(0px, 0px) rotate(0deg);
   transition: 0.2s;
-  box-shadow: -4px -2px 16px 0px #686868, 4px 2px 16px 0px rgba(158, 158, 158, 0.48);
- }
- 
- .random-btn button:hover {
+  box-shadow: -4px -2px 16px 0px #686868,
+    4px 2px 16px 0px rgba(158, 158, 158, 0.48);
+}
+
+.random-btn button:hover {
   color: #000000;
-  background-color: #E5EDF5;
-  box-shadow: -2px -1px 8px 0px #969696, 2px 1px 8px 0px rgba(158, 158, 158, 0.48);
- }
- 
- .random-btn button:active {
+  background-color: #e5edf5;
+  box-shadow: -2px -1px 8px 0px #969696,
+    2px 1px 8px 0px rgba(158, 158, 158, 0.48);
+}
+
+.random-btn button:active {
   box-shadow: none;
- }
+}
