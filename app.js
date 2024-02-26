@@ -160,8 +160,15 @@ function callRenderMealDataPageIngredients(mealData) {
 }
 
 function callRenderMealDataPageRecipe(mealdata) {
-  const containerRight = document.querySelector(".container-right");
+  var videoURL = `${mealdata.strYoutube}`;
+  var splited = videoURL.split("v=");
+  var splitedAgain = splited[1].split("&");
+  var videoId = splitedAgain[0];
 
+  console.log(videoId);
+
+  const containerRight = document.querySelector(".container-right");
+  console.log(mealdata.strYoutube);
   containerRight.innerHTML = `<div class="text-container">
               <h2 class="right-title">${mealdata.strMeal}</h2>
               <div class="recipe">
@@ -170,14 +177,12 @@ function callRenderMealDataPageRecipe(mealdata) {
                 ${mealdata.strInstructions}
                 <h5>Category:</h5>
                 <p>${mealdata.strCategory}</p>
-                <div class="video-btn">
-                  <a href="https://www.youtube.com" target="_blank"
-                    ><button class="comic-button">
-                      <i class="fa-brands fa-youtube"></i>
-                      <b>Make With Video</b>
-                    </button></a
-                  >
-                </div>
+<div ">
+  <iframe frameborder="0" height="200px" width="100%" 
+    src="https://youtube.com/embed/${videoId}?autoplay=1&controls=0&showinfo=0&autohide=1">
+  </iframe>
+</div>
+               
               </div>
             </div> `;
 }
@@ -220,7 +225,7 @@ async function giveRandomRecipe() {
 
 function renderMealData(mealData) {
   console.log(mealData.strInstructions.length);
-  if (mealData.strInstructions.length >= 700) {
+  if (mealData.strInstructions.length >= 500) {
     // filtreliyoruz
     const containerRight = document.querySelector(".container-right");
     const containerLeft = document.querySelector(".container-left");
@@ -295,7 +300,13 @@ function renderIngredients(mealData) {
 function renderRecipes(mealdata) {
   const containerRight = document.querySelector(".container-right");
 
-  containerRight.innerHTML = `<div class="text-container">
+  var videoURL = `${mealdata.strYoutube}`;
+  var splited = videoURL.split("v=");
+  var splitedAgain = splited[1].split("&");
+  var videoId = splitedAgain[0];
+
+  containerRight.innerHTML =
+    containerRight.innerHTML = `<div class="text-container">
               <h2 class="right-title">${mealdata.strMeal}</h2>
               <div class="recipe">
                 <h5>Recipe:</h5>
@@ -303,14 +314,12 @@ function renderRecipes(mealdata) {
                 ${mealdata.strInstructions}
                 <h5>Category:</h5>
                 <p>${mealdata.strCategory}</p>
-                <div class="video-btn">
-                  <a href="https://www.youtube.com" target="_blank"
-                    ><button class="comic-button">
-                      <i class="fa-brands fa-youtube"></i>
-                      <b>Make With Video</b>
-                    </button></a
-                  >
-                </div>
+<div>
+  <iframe frameborder="0"  width="100%" 
+    src="https://youtube.com/embed/${videoId}?autoplay=1&controls=0&showinfo=0&autohide=1">
+  </iframe>
+</div>
+               
               </div>
             </div> `;
 }
