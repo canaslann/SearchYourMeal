@@ -627,7 +627,7 @@ hr.style-two {
   }
 
   .container-left .ingredients {
-    font-size: 2rem !important;
+    font-size: 1.5rem !important;
   }
 
   .container-right {
@@ -636,7 +636,7 @@ hr.style-two {
   }
 
   .container-right .recipe {
-    font-size: 2rem !important;
+    font-size: 1.5rem !important;
   }
 
   .random-bg {
