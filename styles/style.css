@@ -594,9 +594,6 @@ hr.style-two {
 
 @media screen and (max-width: 960px) {
   .random-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 100%;
   }
 
