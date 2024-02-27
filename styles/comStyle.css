@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  --s: 200px;
+  --c1: #1d1d1d;
+  --c2: #353535;
+  --c3: #3c3c3c;
+
+  background: repeating-conic-gradient(
+        from 30deg,
+        #0000 0 120deg,
+        var(--c3) 0 180deg
+      )
+      calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+    repeating-conic-gradient(
+      from 30deg,
+      var(--c1) 0 60deg,
+      var(--c2) 0 120deg,
+      var(--c3) 0 180deg
+    );
+  background-size: var(--s) calc(var(--s) * 0.577);
+  font-family: "lato", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  font-family: Montserrat;
+}
+
+a {
+  text-decoration: none;
+}
+
+.clearfix::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+section {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+/* Navbar */
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-container {
+  width: 70%;
+  height: 11vh;
+  margin-top: 25px;
+  border-radius: 50px;
+  background-color: rgba(178, 176, 176, 0.5);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9;
+}
+
+.show {
+  transform: translateY(0);
+}
+
+nav a {
+  margin: 0 30px;
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.menu__link {
+  color: #fff;
+  line-height: 2;
+  position: relative;
+  font-family: Montserrat;
+  padding-bottom: 7px;
+  font-size: 1.3rem;
+}
+
+.menu__link::before {
+  content: "";
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #fff;
+  position: absolute;
+  bottom: -0.25rem;
+  left: 50%;
+  transition: width 0.4s, left 0.4s;
+}
+
+.menu__link:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.logo {
+  height: 30vh;
+  width: auto;
+  margin-top: 55px;
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 1133px) {
+  nav a {
+    display: none;
+  }
+}
+
+#bar {
+  display: none;
+  color: #fff;
+}
+
+#cross {
+  display: none;
+}
+
+@media screen and (max-width: 1133px) {
+  .logo {
+    height: 25vh;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 1133px) {
+  .logo {
+    height: 23vh;
+    width: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+
+  #bar {
+    display: flex;
+    margin-right: 20px;
+  }
+  nav {
+    height: 9vh;
+    width: 85%;
+  }
+}
+
+/* Content */
+
+#content {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  text-align: center;
+  margin-right: 5rem;
+  margin-left: 5rem;
+}
+
+.col {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+}
+
+#cards {
+  background-color: #fff;
+}
+
+.task {
+  position: relative;
+  color: #2e2e2f;
+  cursor: move;
+  background-color: #d5d5d5;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+  margin-bottom: 1rem;
+  border: 3px dashed transparent;
+  max-width: 350px;
+}
+
+.task:hover {
+  box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
+  border-color: rgba(162, 179, 207, 0.2) !important;
+}
+
+.item-img {
+  width: 80%;
+  margin-left: 1rem;
+  margin-right: 1.1rem;
+  margin-top: 1rem;
+}
+
+.task p {
+  font-size: 15px;
+  margin: 1.2rem 0;
+}
+
+.tag {
+  border-radius: 100px;
+  padding: 4px 13px;
+  font-size: 12px;
+  color: #ffffff;
+  background-color: #1389eb;
+}
+
+.tags {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.options {
+  background: transparent;
+  border: 0;
+  color: #c4cad3;
+  font-size: 17px;
+}
+
+.options svg {
+  fill: #9fa4aa;
+  width: 20px;
+}
+
+.stats {
+  position: relative;
+  width: 100%;
+  color: #9fa4aa;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stats div {
+  margin-right: 1rem;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.stats svg {
+  margin-right: 5px;
+  height: 100%;
+  stroke: #9fa4aa;
+}
+
+.viewer span {
+  height: 30px;
+  width: 30px;
+  background-color: rgb(28, 117, 219);
+  margin-right: -10px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  padding: 2px;
+}
+
+.viewer span svg {
+  stroke: #fff;
+}
