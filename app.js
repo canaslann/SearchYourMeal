@@ -39,12 +39,37 @@ searchbutton.addEventListener("click", check);
 
 function check() {
   const inputValue = document.querySelector(".input").value; // input değerini "inputValue" olarak ayarla
-  if (inputValue == "") {
+  if (inputValue == " ") {
     // Search Bar bos sekilde yonlendirilmesin Kontrolu
     alert("!!!");
   } else {
-    searchbuttonlink.href = "searchResults.html";
-    saveData(inputValue);
+    checkApiForValue(inputValue);
+  }
+}
+
+async function checkApiForValue(inputValue) {
+  try {
+    const response = await fetch(
+      `https://www.themealdb.com/api/json/v1/1/search.php?s=${inputValue}`,
+      {
+        method: "GET",
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    if (data.meals === null) {
+      showAlertBox(inputValue);
+    } else {
+      saveData(inputValue);
+      searchbuttonlink.href = "searchResults.html";
+    }
+  } catch (error) {
+    console.error("Error fetching data:", error);
   }
 }
 
@@ -322,4 +347,20 @@ function renderRecipes(mealdata) {
                
               </div>
             </div> `;
+}
+
+const closeButtonPopup = document.querySelector(".close-button-popup");
+closeButtonPopup.addEventListener("click", closeShowPopup);
+
+function showAlertBox(inputValue) {
+  const alertBoxDiv = document.querySelector(".alert-popup");
+  console.log(alertBoxDiv);
+  alertBoxDiv.style.visibility = "visible";
+}
+
+function closeShowPopup() {
+  const alertBoxDiv = document.querySelector(".alert-popup");
+
+  console.log(alertBoxDiv);
+  alertBoxDiv.style.visibility = "hidden";
 }
