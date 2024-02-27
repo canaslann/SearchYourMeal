@@ -36,7 +36,7 @@ h4,
 h5,
 h6 {
   font-weight: 700;
-  font-family: "Lato",sans-serif;
+  font-family: "Lato", sans-serif;
   text-transform: uppercase;
   letter-spacing: 5px;
 }
@@ -57,7 +57,7 @@ section {
   text-align: center;
 }
 
-.container {   
+.container {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -172,7 +172,7 @@ nav a {
 
 /* Content */
 
-section h2{
+section h2 {
   color: #ffffff;
   margin-bottom: 3rem;
 }
@@ -181,8 +181,6 @@ section h2{
   padding-top: 6rem;
   padding-bottom: 6rem;
   text-align: center;
-  margin-right: 5rem;
-  margin-left: 5rem;
 }
 
 .col {
@@ -190,6 +188,50 @@ section h2{
   width: 33.33%;
   padding: 1rem;
   padding-left: 3rem;
+}
+
+@media screen and (max-width: 1027px) {
+  #cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .col {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: none;
+  }
+}
+
+@media screen and (max-width: 793px) {
+  #content {
+    align-items: center;
+  }
+
+  #cards {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .col {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: none;
+    padding-left: 1rem !important;
+  }
+
+  .task {
+    max-width: 100% !important;
+  }
+
+  #content {
+    width: 100%;
+
+    padding: 10px;
+  }
 }
 
 #cards {
