@@ -36,7 +36,9 @@ h4,
 h5,
 h6 {
   font-weight: 700;
-  font-family: Montserrat;
+  font-family: "Lato",sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 5px;
 }
 
 a {
@@ -55,7 +57,7 @@ section {
   text-align: center;
 }
 
-.container {
+.container {   
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -170,9 +172,14 @@ nav a {
 
 /* Content */
 
+section h2{
+  color: #ffffff;
+  margin-bottom: 3rem;
+}
+
 #content {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
   text-align: center;
   margin-right: 5rem;
   margin-left: 5rem;
@@ -181,11 +188,13 @@ nav a {
 .col {
   float: left;
   width: 33.33%;
-  padding: 10px;
+  padding: 1rem;
+  padding-left: 3rem;
 }
 
 #cards {
   background-color: #fff;
+  border-radius: 8px;
 }
 
 .task {
