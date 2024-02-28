@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+html{
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
 body {
   --s: 200px;
   --c1: #1d1d1d;
@@ -67,12 +72,12 @@ section {
 
 /* Navbar */
 
-nav {
+.nav-container {
   display: flex;
   justify-content: center;
 }
 
-.nav-container {
+.nav {
   width: 70%;
   height: 11vh;
   margin-top: 25px;
@@ -90,7 +95,7 @@ nav {
   transform: translateY(0);
 }
 
-nav a {
+.nav a {
   margin: 0 30px;
   text-decoration: none;
   color: #ffffff;
@@ -103,7 +108,6 @@ nav a {
   position: relative;
   font-family: Montserrat;
   padding-bottom: 7px;
-  font-size: 1.3rem;
 }
 
 .menu__link::before {
@@ -131,7 +135,7 @@ nav a {
 }
 
 @media screen and (max-width: 1133px) {
-  nav a {
+  .nav a {
     display: none;
   }
 }
@@ -164,10 +168,55 @@ nav a {
     display: flex;
     margin-right: 20px;
   }
-  nav {
+  .nav {
     height: 9vh;
     width: 85%;
   }
+}
+
+/* Responsive Navbar */
+
+.nav-responsive {
+  width: 100%;
+  background-color: black;
+  height: 55vh;
+  transition: 0.5s;
+}
+
+.nav-responsive .left-links a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  text-transform: uppercase;
+}
+
+.nav-responsive .left-links {
+  margin-top: 50px;
+}
+
+.nav-responsive .right-links a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  text-transform: uppercase;
+}
+
+.nav-responsive .logo {
+  display: none;
+}
+
+.nav-responsive #bar {
+  display: none;
+}
+
+.nav-responsive #cross {
+  display: block;
+  color: #fff;
+  text-align: center;
+  margin-top: 35px;
+  transition: 0.5s;
 }
 
 /* Content */
@@ -178,8 +227,7 @@ section h2 {
 }
 
 #content {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding: 6rem 10rem;
   text-align: center;
 }
 
@@ -187,7 +235,7 @@ section h2 {
   float: left;
   width: 33.33%;
   padding: 1rem;
-  padding-left: 3rem;
+  padding-left: 4rem;
 }
 
 @media screen and (max-width: 1027px) {

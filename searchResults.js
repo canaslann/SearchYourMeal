@@ -1,3 +1,10 @@
+// ---navbar---
+
+function scrollToSection(sectionId) {
+  var section = document.getElementById(sectionId);
+  section.scrollIntoView({ behavior: "smooth" });
+}
+
 // Responsive Navbar
 
 const menuicon = document.querySelector("#bar");
