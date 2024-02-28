@@ -112,7 +112,7 @@ async function randomRecipeSectionRender() {
 
 function callRenderMealDataPage(mealData) {
   console.log(mealData.strInstructions.length);
-  if (mealData.strInstructions.length >= 700) {
+  if (mealData.strInstructions.length >= 600) {
     // filtreliyoruz
     const containerRight = document.querySelector(".container-right");
     const containerLeft = document.querySelector(".container-left");
@@ -203,7 +203,7 @@ function callRenderMealDataPageRecipe(mealdata) {
                 <h5>Category:</h5>
                 <p>${mealdata.strCategory}</p>
 <div ">
-  <iframe frameborder="0" height="200px" width="100%" 
+  <iframe class="random-iframe" frameborder="0" height="200px" width="100%" 
     src="https://youtube.com/embed/${videoId}?autoplay=1&controls=0&showinfo=0&autohide=1">
   </iframe>
 </div>
@@ -339,7 +339,7 @@ function renderRecipes(mealdata) {
                 ${mealdata.strInstructions}
                 <h5>Category:</h5>
                 <p>${mealdata.strCategory}</p>
-<div>
+<div class="random-video" >
   <iframe frameborder="0"  width="100%" 
     src="https://youtube.com/embed/${videoId}?autoplay=1&controls=0&showinfo=0&autohide=1">
   </iframe>
