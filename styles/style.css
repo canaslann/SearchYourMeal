@@ -205,7 +205,6 @@ a {
   text-align: center;
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 
 .search-bg {
@@ -858,4 +857,33 @@ hr.style-two {
 
 .random-video {
   margin-top: 50px;
+}
+
+.go-top-btn {
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 70px;
+  width: 70px;
+  background: #fff;
+  border: 3px solid #333;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 4px 35px 15px rgba(197, 196, 196, 0.7);
+  transition: 0.3s;
+}
+
+.go-top-btn img {
+  width: 50px;
+  height: 50px;
+}
+
+.go-top-btn:hover {
+  height: 80px;
+  width: 80px;
+  transition: 0.3s;
+  padding: 3rem;
 }

@@ -13,7 +13,8 @@ body {
 
 .container {
   width: 100%;
-  background: rgba(0, 0, 0, 0.4) url(https://static.vecteezy.com/system/resources/previews/024/444/501/large_2x/table-scene-with-a-selection-of-delicious-foods-top-view-over-a-dark-wood-banner-background-generate-ai-free-photo.jpg);
+  background: rgba(0, 0, 0, 0.4)
+    url(https://static.vecteezy.com/system/resources/previews/024/444/501/large_2x/table-scene-with-a-selection-of-delicious-foods-top-view-over-a-dark-wood-banner-background-generate-ai-free-photo.jpg);
   background-blend-mode: darken;
   background-size: cover;
   background-repeat: no-repeat;
@@ -174,12 +175,11 @@ body {
   padding-bottom: 7rem;
 }
 
-.results{
+.results {
   margin-top: 4rem;
-  display: flex;  
+  display: flex;
   justify-content: center;
   gap: 50px;
-
 }
 
 .container-right {
@@ -197,17 +197,43 @@ body {
 }
 
 @media screen and (max-width: 960px) {
-  .results{
+  .results {
     display: grid;
-
   }
-
 }
 
 @media screen and (max-width: 573px) {
-  .results{
+  .results {
     display: list-item;
     margin-left: 4rem;
   }
 }
 
+.go-top-btn {
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 70px;
+  width: 70px;
+  background: #fff;
+  border: 3px solid #333;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 4px 35px 15px rgba(197, 196, 196, 0.7);
+  transition: 0.5s;
+}
+
+.go-top-btn img {
+  width: 50px;
+  height: 50px;
+}
+
+.go-top-btn:hover {
+  height: 80px;
+  width: 80px;
+  transition: 0.3s;
+  padding: 3rem;
+}
