@@ -1,61 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Result</title>
+    <link rel="stylesheet" href="styles/searchResults.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Search Result</title>
-  <link rel="stylesheet" href="styles/searchResults.css" />
-  <link rel="stylesheet" href="styles/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="icon" type="image/x-icon" href="img/fav-icon.png" />
+  </head>
 
-  <link rel="icon" type="image/x-icon" href="img/fav-icon.png" />
-</head>
-
-<body>
-  <div class="container">
-    <!-- Navbar Starts -->
-    <div class="nav-container">
-      <div class="nav">
-        <div class="left-links">
-          <a href="index.html" class="menu__link">Home</a>
-          <a href="#" class="menu__link">Categories</a>
+  <body>
+    <div class="container">
+      <!-- Navbar Starts -->
+      <div class="nav-container">
+        <div class="nav">
+          <div class="left-links">
+            <a href="index.html" class="menu__link">Home</a>
+            <a href="#" class="menu__link">Categories</a>
+          </div>
+          <img class="logo" src="img/ertug_Logo_guncel_son-01.png" />
+          <div class="right-links">
+            <a href="comunity.html" class="menu__link">Community</a>
+            <a href="index.html#random" class="menu__link">Random</a>
+            <i id="cross" class="fa-solid fa-xmark fa-2xl"></i>
+          </div>
+          <i id="bar" class="fa-solid fa-bars fa-2xl"></i>
         </div>
-        <img class="logo" src="img/ertug_Logo_guncel_son-01.png" />
-        <div class="right-links">
-          <a href="comunity.html" class="menu__link">Community</a>
-          <a href="index.html#random" class="menu__link">Random</a>
-          <i id="cross" class="fa-solid fa-xmark fa-2xl"></i>
-        </div>
-        <i id="bar" class="fa-solid fa-bars fa-2xl"></i>
       </div>
+      <!-- Navbar Ends -->
+
+      <!-- Results Starts -->
+      <section id="search-results">
+        <div class="results">
+          <div class="container-left div-container"></div>
+          <div class="container-right div-container"></div>
+        </div>
+      </section>
+
+      <!-- Button To Scroll Top -->
+
+      <button class="go-top-btn">
+        <img src="img/arrow-up.png" alt="arrow up" />
+      </button>
+
+      <!-- Packages -->
+
+      <script
+        src="https://kit.fontawesome.com/20df13cb09.js"
+        crossorigin="anonymous"
+      ></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="js/searchResults.js"></script>
     </div>
-    <!-- Navbar Ends -->
-
-    <!-- Results Starts -->
-    <section id="search-results">
-      <div class="results">
-        <div class="container-left div-container"></div>
-        <div class="container-right div-container"></div>
-      </div>
-    </section>
-    <!-- Packages -->
-
-    <script src="https://kit.fontawesome.com/20df13cb09.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="js/searchResults.js"></script>
-  </div>
-</body>
-
+  </body>
 </html>
