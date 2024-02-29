@@ -112,7 +112,7 @@ async function randomRecipeSectionRender() {
 
 function callRenderMealDataPage(mealData) {
   console.log(mealData.strInstructions.length);
-  if (mealData.strInstructions.length >= 600) {
+  if (mealData.strInstructions.length >= 700) {
     // filtreliyoruz
     const containerRight = document.querySelector(".container-right");
     const containerLeft = document.querySelector(".container-left");

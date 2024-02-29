@@ -283,14 +283,12 @@ section h2 {
 }
 
 #cards {
-  background-color: #fff;
   border-radius: 8px;
 }
 
 .task {
   position: relative;
   color: #2e2e2f;
-  cursor: move;
   background-color: #d5d5d5;
   padding: 1rem;
   border-radius: 8px;

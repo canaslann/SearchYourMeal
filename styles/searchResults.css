@@ -1,10 +1,10 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   font-family: "lato", sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
@@ -13,20 +13,10 @@ body{
 
 .container {
   width: 100%;
-  --s: 200px; /* control the size */
-  --_g: #5b5b5b 25%, #898989 0 50%, #0000 0;
-  --_l1: #fff 0 1px, #0000 0 calc(25% - 1px), #fff 0 25%;
-  --_l2: #fff 0 1px, #0000 0 calc(50% - 1px), #fff 0 50%;
-  background: repeating-linear-gradient(45deg, var(--_l1)),
-    repeating-linear-gradient(-45deg, var(--_l1)),
-    repeating-linear-gradient(0deg, var(--_l2)),
-    repeating-linear-gradient(90deg, var(--_l2)),
-    conic-gradient(from 135deg at 25% 75%, var(--_g)),
-    conic-gradient(from 225deg at 25% 25%, var(--_g)),
-    conic-gradient(from 45deg at 75% 75%, var(--_g)),
-    conic-gradient(from -45deg at 75% 25%, var(--_g)),
-    repeating-conic-gradient(#125c65 0 45deg, #080808 0 90deg);
-  background-size: var(--s) var(--s);
+  background: rgba(0, 0, 0, 0.4) url(https://static.vecteezy.com/system/resources/previews/024/444/501/large_2x/table-scene-with-a-selection-of-delicious-foods-top-view-over-a-dark-wood-banner-background-generate-ai-free-photo.jpg);
+  background-blend-mode: darken;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 /* ---nav-bar--- */
 
@@ -179,8 +169,45 @@ body{
 
 /* Result */
 
-#search-results{
-  display: flex; 
-  justify-content: center;
-  padding: 8rem 0;
+#search-results {
+  margin-top: 4rem;
+  padding-bottom: 7rem;
 }
+
+.results{
+  margin-top: 4rem;
+  display: flex;  
+  justify-content: center;
+  gap: 50px;
+
+}
+
+.container-right {
+  background-color: white;
+  width: 30%;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.container-left {
+  background-color: white;
+  width: 30%;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 960px) {
+  .results{
+    display: grid;
+
+  }
+
+}
+
+@media screen and (max-width: 573px) {
+  .results{
+    display: list-item;
+    margin-left: 4rem;
+  }
+}
+
