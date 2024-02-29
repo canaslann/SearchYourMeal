@@ -112,7 +112,7 @@ a {
   opacity: 0.9;
 }
 
-@media screen and (max-width: 1133px) {
+@media screen and (max-width: 1300px) {
   .nav a {
     display: none;
   }
@@ -127,14 +127,14 @@ a {
   display: none;
 }
 
-@media screen and (max-width: 1133px) {
+@media screen and (max-width: 1300px) {
   .logo {
     height: 25vh;
     width: auto;
   }
 }
 
-@media screen and (max-width: 1133px) {
+@media screen and (max-width: 1300px) {
   .logo {
     height: 23vh;
     width: auto;
@@ -256,6 +256,7 @@ a {
   width: 60%;
   height: 16%;
   transition: 0.5s;
+  margin-top: 15px;
 }
 
 .input[type="text"]:hover {
@@ -274,6 +275,7 @@ a {
 .search-btn-box {
   display: flex;
   justify-content: center;
+  margin-top: 20px;
 }
 
 .search-button {
