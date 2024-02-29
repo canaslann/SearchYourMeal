@@ -15,18 +15,13 @@ body {
   --c2: #353535;
   --c3: #3c3c3c;
 
-  background: repeating-conic-gradient(
-        from 30deg,
-        #0000 0 120deg,
-        var(--c3) 0 180deg
-      )
-      calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
-    repeating-conic-gradient(
-      from 30deg,
+  background: repeating-conic-gradient(from 30deg,
+      #0000 0 120deg,
+      var(--c3) 0 180deg) calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+    repeating-conic-gradient(from 30deg,
       var(--c1) 0 60deg,
       var(--c2) 0 120deg,
-      var(--c3) 0 180deg
-    );
+      var(--c3) 0 180deg);
   background-size: var(--s) calc(var(--s) * 0.577);
   font-family: "lato", sans-serif;
   font-size: 1.6rem;
@@ -68,6 +63,7 @@ section {
   margin-right: auto;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+  margin-top: 60px;
 }
 
 /* Navbar */
@@ -168,6 +164,7 @@ section {
     display: flex;
     margin-right: 20px;
   }
+
   .nav {
     height: 9vh;
     width: 85%;
@@ -238,6 +235,12 @@ section h2 {
   padding-left: 4rem;
 }
 
+.task:hover {
+  background-color: #bebdbd;
+  transition: 0.5s;
+}
+
+
 @media screen and (max-width: 1027px) {
   #cards {
     display: flex;
@@ -295,7 +298,8 @@ section h2 {
   box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
   margin-bottom: 1rem;
   border: 3px dashed transparent;
-  max-width: 350px;
+  max-width: 400px;
+  min-height: 660px;
 }
 
 .task:hover {
@@ -391,15 +395,14 @@ section h2 {
   right: 35px;
   border-radius: 50%;
   cursor: pointer;
-  height: 70px;
-  width: 70px;
+  height: 60px;
+  width: 60px;
   background: #fff;
-  border: 3px solid #333;
+  border: 3px solid #c7c6c6;
   display: none;
   justify-content: center;
   align-items: center;
-  box-shadow: 2px 4px 35px 15px rgba(197, 196, 196, 0.7);
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .go-top-btn img {
@@ -408,8 +411,8 @@ section h2 {
 }
 
 .go-top-btn:hover {
-  height: 80px;
-  width: 80px;
+  height: 65px;
+  width: 65px;
   transition: 0.3s;
   padding: 3rem;
 }

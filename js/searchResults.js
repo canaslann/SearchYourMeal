@@ -120,9 +120,8 @@ function renderIngredients(mealData) {
   // Render HTML dynamically
   containerLeft.innerHTML = `
     <div class="random-image">
-      <img src="${
-        mealData.strMealThumb
-      }" alt="a Reuben sandwich on wax paper" />
+      <img src="${mealData.strMealThumb
+    }" alt="a Reuben sandwich on wax paper" />
     </div>
     <h2 class="container-left-title">Ingredients</h2>
     <div class="ingredients">

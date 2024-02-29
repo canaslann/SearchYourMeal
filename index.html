@@ -1,363 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Search Your Meal</title>
 
-    <link rel="stylesheet" href="styles/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search Your Meal</title>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
 
-    <link rel="icon" type="image/x-icon" href="img/fav-icon.png" />
-  </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-  <body>
-    <!-- Nav-bar -->
+  <link rel="icon" type="image/x-icon" href="img/fav-icon.png" />
+</head>
 
-    <div class="nav-container">
-      <div class="nav">
-        <div class="left-links">
-          <a href="#" class="menu__link">Home</a>
-          <a href="#results" class="menu__link">Daily Recipes</a>
+<body>
+  <!-- Nav-bar -->
+
+  <div class="nav-container">
+    <div class="nav">
+      <div class="left-links">
+        <a href="#" class="menu__link">Home</a>
+        <a href="#results" class="menu__link">Daily Recipes</a>
+      </div>
+      <img class="logo" src="img/ertug_Logo_guncel_son-01.png" />
+      <div class="right-links">
+        <a href="comunity.html" class="menu__link">Forum</a>
+        <a href="#random" class="menu__link">Random Recipe</a>
+        <i id="cross" class="fa-solid fa-xmark fa-2xl"></i>
+      </div>
+      <i id="bar" class="fa-solid fa-bars fa-2xl"></i>
+    </div>
+  </div>
+
+  <!-- Feed Starts -->
+
+  <video class="search-bg" autoplay muted loop>
+    <source src="img/pexels-nicole-michalou-6139292 (2160p).mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <section id="search">
+    <!-- Alert Box -->
+
+    <div class="feed">
+      <div class="title-input card-search">
+        <h1 class="title">Search by Name</h1>
+        <input type="text" placeholder="Enter Your Recipe Name..." class="input" required />
+        <div class="search-btn-box">
+          <a class="search-link">
+            <button class="search-button">
+              Search<i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+            </button>
+          </a>
         </div>
-        <img class="logo" src="img/ertug_Logo_guncel_son-01.png" />
-        <div class="right-links">
-          <a href="comunity.html" class="menu__link">Forum</a>
-          <a href="#random" class="menu__link">Random Recipe</a>
-          <i id="cross" class="fa-solid fa-xmark fa-2xl"></i>
-        </div>
-        <i id="bar" class="fa-solid fa-bars fa-2xl"></i>
       </div>
     </div>
+  </section>
 
-    <!-- Feed Starts -->
+  <!-- Daily Receipts -->
 
-    <video class="search-bg" autoplay muted loop>
-      <source
-        src="img/pexels-nicole-michalou-6139292 (2160p).mp4"
-        type="video/mp4"
-      />
-      Your browser does not support the video tag.
-    </video>
-
-    <section id="search">
-      <!-- Alert Box -->
-
-      <div
-        style="
-          position: fixed;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 350px;
-          background-color: #fff;
-          height: 350px;
-          border-radius: 10px;
-          visibility: hidden;
-          box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
-          transition: 2s;
-          z-index: 31;
-        "
-        class="alert-popup"
-      >
-        <div
-          style="display: flex; justify-content: center"
-          class="alert-img-box"
-        >
-          <img
-            style="height: 15rem; width: 150px"
-            src="data:image/png;base64,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"
-          />
-        </div>
-        <h2 style="text-align: center">
-          Soory,there is no recipe name with [recipename]
-        </h2>
-        <h5 style="text-align: center">You can try with another name.</h5>
-        <div style="display: flex; justify-content: center; margin-top: 10px">
-          <button
-            class="close-button-popup"
-            style="
-              width: 150px;
-              height: 40px;
-              background-color: whitesmoke;
-              color: black;
-              border: none;
-              border-radius: 5px;
-              margin-top: 15px;
-            "
-          >
-            Close
-          </button>
-        </div>
-      </div>
-
-      <div class="feed">
-        <div class="title-input card-search">
-          <h1 class="title">Search by Name</h1>
-
-          <input
-            type="text"
-            placeholder="Enter Your Recipe Name..."
-            class="input"
-            required
-          />
-
-          <div class="search-btn-box">
-            <a class="search-link">
-              <button class="search-button">
-                Search<i
-                  class="fa-solid fa-magnifying-glass"
-                  id="search-icon"
-                ></i>
-              </button>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Daily Receipts -->
-
-    <section id="results">
-      <h1 class="daily-title">Daily Recipes</h1>
-      <hr class="style-two" />
-      <div class="main">
-        <ul class="cards">
-          <li class="cards_item">
-            <div class="card">
-              <div class="card_image">
-                <img
-                  src="img/dailyrecipe1.jpeg"
-                  alt="mixed vegetable salad in a mason jar. "
-                />
-              </div>
-              <div class="card_content">
-                <h2 class="card_title">Farmstand Salad &#x2022;</h2>
-                <div class="card_text">
-                  <p>
-                    Bring a large pot of water to a boil. Add kosher salt to the
-                    boiling water, then add the pasta. Cook according to the
-                    package instructions, about 9 minutes. In a large skillet
-                    over medium-high heat, add the olive oil and heat until the
-                    oil starts to shimmer. Add the garlic and cook, stirring,
-                    until fragrant, 1 to 2 minutes. Add the chopped tomatoes,
-                    red chile flakes, Italian seasoning and salt and pepper to
-                    taste. Bring to a boil and cook for 5 minutes. Remove from
-                    the heat and add the chopped basil. Drain the pasta and add
-                    it to the sauce. Garnish with Parmigiano-Reggiano flakes and
-                    more basil and serve warm.
-                  </p>
-                </div>
-              </div>
+  <section id="results">
+    <h1 class="daily-title">Daily Recipes</h1>
+    <hr class="style-two" />
+    <div class="main">
+      <ul class="cards">
+        <li class="cards_item">
+          <div class="card">
+            <div class="card_image">
+              <img src="img/dailyrecipe1.jpeg" alt="mixed vegetable salad in a mason jar. " />
             </div>
-          </li>
-
-          <li class="cards_item">
-            <div class="card">
-              <div class="card_image">
-                <img
-                  src="img/dailyrecipe2.jpeg"
-                  alt="a Reuben sandwich on wax paper. "
-                />
-              </div>
-              <div class="card_content">
-                <h2 class="card_title">Ultimate Reuben &#x2022;</h2>
-                <div class="card_text">
-                  <p>
-                    1. Blend all the mousse ingredients together in your food
-                    processor until smooth. Add the cacao powder first and, as
-                    you blend, have all the ingredients to hand in order to
-                    adjust the ratios slightly as the size of avocados and
-                    bananas varies so much. The perfect ratio in order to avoid
-                    the dish tasting too much of either is to use equal amounts
-                    of both.
-                    <br />
-                  </p>
-
-                  <p>
-                    2. Taste and add a few drops of stevia if you feel you need
-                    more sweetness.
-                  </p>
-
-                  <p>
-                    3. Fill little cups or shot glasses with the mousse,
-                    sprinkle with the cacao powder or nibs and serve. Tip If you
-                    don’t have a frozen banana to hand you can just use a normal
-                    one and then chill the mousse before serving for a cooling
-                    dessert.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="cards_item">
-            <div class="card">
-              <div class="card_image">
-                <img
-                  src="img/dailyrecipe3.jpeg"
-                  alt="A side view of a plate of figs and berries. "
-                />
-              </div>
-              <div class="card_content">
-                <h2 class="card_title">Fig &amp; Berry Plate &#x2022;</h2>
-                <div class="card_text">
-                  <p><span class="note">Seasonal.</span></p>
-                  <p>
-                    For the topping, boil the potatoes in salted water until
-                    tender. Drain and push through a potato ricer, or mash
-                    thoroughly. Stir in the butter, cream and egg yolks. Season
-                    and set aside. For the filling, melt the butter in a large
-                    pan. Add the shallots, carrots and celery and gently fry
-                    until soft, then add the garlic. Pour in the wine and cook
-                    for 1 minute. Stir in the tomato purée, chopped tomatoes and
-                    stock and cook for 10–15 minutes, until thickened. Add the
-                    shredded chicken, olives and parsley. Season to taste with
-                    salt and pepper. Preheat the oven to 180C/160C Fan/Gas 4.
-                    Put the filling in a 20x30cm/8x12in ovenproof dish and top
-                    with the mashed potato. Grate over the Gruyère. Bake for
-                    30–35 minutes, until piping hot and the potato is
-                    golden-brown.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <video class="random-bg" autoplay muted loop>
-      <source src="img/random-background.mp4" type="video/mp4" />
-    </video>
-    <section id="random">
-      <div class="random-feed">
-        <div class="random-title">
-          <h1 style="color: #fff">Give a random recipe</h1>
-          <div class="random-btn">
-            <button class="random-button">Random Recipe</button>
-          </div>
-        </div>
-        <div class="random-div">
-          <div class="container-left">
-            <div class="random-image"></div>
-            <div class="ingredients">
-              <div class="dot-spinner-cover-left">
-                <div class="dot-spinner">
-                  <div class="dot-spinner__dot"></div>
-                  <div class="dot-spinner__dot"></div>
-                  <div class="dot-spinner__dot"></div>
-                  <div class="dot-spinner__dot"></div>
-                  <div class="dot-spinner__dot"></div>
-                  <div class="dot-spinner__dot"></div>
-                  <div class="dot-spinner__dot"></div>
-                  <div class="dot-spinner__dot"></div>
-                </div>
+            <div class="card_content">
+              <h2 class="card_title">Farmstand Salad &#x2022;</h2>
+              <div class="card_text">
+                <p>
+                  Bring a large pot of water to a boil. Add kosher salt to the
+                  boiling water, then add the pasta. Cook according to the
+                  package instructions, about 9 minutes. In a large skillet
+                  over medium-high heat, add the olive oil and heat until the
+                  oil starts to shimmer. Add the garlic and cook, stirring,
+                  until fragrant, 1 to 2 minutes. Add the chopped tomatoes,
+                  red chile flakes, Italian seasoning and salt and pepper to
+                  taste. Bring to a boil and cook for 5 minutes. Remove from
+                  the heat and add the chopped basil. Drain the pasta and add
+                  it to the sauce. Garnish with Parmigiano-Reggiano flakes and
+                  more basil and serve warm.
+                </p>
               </div>
             </div>
           </div>
+        </li>
 
-          <div class="container-right">
-            <div class="text-container">
-              <h2 class="right-title">Recipe Name</h2>
-              <div class="dot-spinner-cover-right">
-                <div class="dot-spinner">
-                  <div class="dot-spinner__dot"></div>
-                  <div class="dot-spinner__dot"></div>
-                  <div class="dot-spinner__dot"></div>
-                  <div class="dot-spinner__dot"></div>
-                  <div class="dot-spinner__dot"></div>
-                  <div class="dot-spinner__dot"></div>
-                  <div class="dot-spinner__dot"></div>
-                  <div class="dot-spinner__dot"></div>
-                </div>
+        <li class="cards_item">
+          <div class="card">
+            <div class="card_image">
+              <img src="img/dailyrecipe2.jpeg" alt="a Reuben sandwich on wax paper. " />
+            </div>
+            <div class="card_content">
+              <h2 class="card_title">Ultimate Reuben &#x2022;</h2>
+              <div class="card_text">
+                <p>
+                  1. Blend all the mousse ingredients together in your food
+                  processor until smooth. Add the cacao powder first and, as
+                  you blend, have all the ingredients to hand in order to
+                  adjust the ratios slightly as the size of avocados and
+                  bananas varies so much. The perfect ratio in order to avoid
+                  the dish tasting too much of either is to use equal amounts
+                  of both.
+                  <br />
+                </p>
+
+                <p>
+                  2. Taste and add a few drops of stevia if you feel you need
+                  more sweetness.
+                </p>
+
+                <p>
+                  3. Fill little cups or shot glasses with the mousse,
+                  sprinkle with the cacao powder or nibs and serve. Tip If you
+                  don’t have a frozen banana to hand you can just use a normal
+                  one and then chill the mousse before serving for a cooling
+                  dessert.
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="cards_item">
+          <div class="card">
+            <div class="card_image">
+              <img src="img/dailyrecipe3.jpeg" alt="A side view of a plate of figs and berries. " />
+            </div>
+            <div class="card_content">
+              <h2 class="card_title">Fig &amp; Berry Plate &#x2022;</h2>
+              <div class="card_text">
+                <p><span class="note">Seasonal.</span></p>
+                <p>
+                  For the topping, boil the potatoes in salted water until
+                  tender. Drain and push through a potato ricer, or mash
+                  thoroughly. Stir in the butter, cream and egg yolks. Season
+                  and set aside. For the filling, melt the butter in a large
+                  pan. Add the shallots, carrots and celery and gently fry
+                  until soft, then add the garlic. Pour in the wine and cook
+                  for 1 minute. Stir in the tomato purée, chopped tomatoes and
+                  stock and cook for 10–15 minutes, until thickened. Add the
+                  shredded chicken, olives and parsley. Season to taste with
+                  salt and pepper. Preheat the oven to 180C/160C Fan/Gas 4.
+                  Put the filling in a 20x30cm/8x12in ovenproof dish and top
+                  with the mashed potato. Grate over the Gruyère. Bake for
+                  30–35 minutes, until piping hot and the potato is
+                  golden-brown.
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <video class="random-bg" autoplay muted loop>
+    <source src="img/random-background.mp4" type="video/mp4" />
+  </video>
+  <section id="random">
+    <div class="random-feed">
+      <div class="random-title">
+        <h1 style="color: #fff">Give a random recipe</h1>
+        <div class="random-btn">
+          <button class="random-button">Random Recipe</button>
+        </div>
+      </div>
+      <div class="random-div">
+        <div class="container-left">
+          <div class="random-image"></div>
+          <div class="ingredients">
+            <div class="dot-spinner-cover-left">
+              <div class="dot-spinner">
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-right">
+          <div class="text-container">
+            <h2 class="right-title">Recipe Name</h2>
+            <div class="dot-spinner-cover-right">
+              <div class="dot-spinner">
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Button To Scroll Top -->
 
-    <button class="go-top-btn">
-      <img src="img/arrow-up.png" alt="arrow up" />
-    </button>
+  <div id="snackbar">Enter a valid recipe name</div>
 
-    <!-- Packages -->
-    <script
-      src="https://kit.fontawesome.com/20df13cb09.js"
-      crossorigin="anonymous"
-    ></script>
+  <!-- Button To Scroll Top -->
 
-    <script src="js/app.js"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script>
-      ScrollReveal({
-        distance: "25rem",
-        duration: 1000,
-        delay: 300,
-      });
+  <button class="go-top-btn">
+    <img src="img/arrow-up.png" alt="arrow up" />
+  </button>
 
-      ScrollReveal().reveal(".title", {
-        delay: 250,
-        distance: "18px",
-        reset: "true",
-      });
+  <!-- Packages -->
+  <script src="https://kit.fontawesome.com/20df13cb09.js" crossorigin="anonymous"></script>
 
-      ScrollReveal().reveal(".menu__link", {
-        delay: 250,
-        distance: "18px",
-      });
+  <script src="js/app.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    ScrollReveal({
+      distance: "25rem",
+      duration: 1000,
+      delay: 300,
+    });
 
-      ScrollReveal().reveal(".daily-title", {
-        delay: 250,
-        distance: "18px",
-        reset: "true",
-      });
+    ScrollReveal().reveal(".title", {
+      delay: 150,
+      distance: "18px",
+      reset: "true",
+    });
 
-      ScrollReveal().reveal(".cards_item", {
-        delay: 250,
-        distance: "18px",
-        reset: "true",
-      });
+    ScrollReveal().reveal(".menu__link", {
+      delay: 250,
+      distance: "18px",
+    });
 
-      ScrollReveal().reveal(".container-left", {
-        delay: 250,
-        distance: "18px",
-        origin: "left",
-      });
+    ScrollReveal().reveal(".daily-title", {
+      delay: 250,
+      distance: "18px",
+      reset: "true",
+    });
 
-      ScrollReveal().reveal(".container-right", {
-        delay: 250,
-        distance: "18px",
-        origin: "right",
-      });
+    ScrollReveal().reveal(".cards_item", {
+      delay: 350,
+      distance: "18px",
+      reset: "true",
+    })
 
-      ScrollReveal().reveal(".right-title", {
-        delay: 250,
-        distance: "18px",
-        origin: "right",
-        reset: "true",
-      });
-    </script>
-  </body>
+    ScrollReveal().reveal(".container-left", {
+      delay: 250,
+      distance: "18px",
+      origin: "left",
+    });
+
+    ScrollReveal().reveal(".container-right", {
+      delay: 250,
+      distance: "18px",
+      origin: "right",
+    });
+
+    ScrollReveal().reveal(".right-title", {
+      delay: 250,
+      distance: "18px",
+      origin: "right",
+      reset: "true",
+    });
+
+    ScrollReveal().reveal(".alert-popup", {
+      delay: 700,
+      distance: "18px",
+      reset: "true",
+    });
+
+  </script>
+</body>
+
 </html>

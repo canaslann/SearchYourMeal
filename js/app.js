@@ -62,9 +62,9 @@ searchbutton.addEventListener("click", check);
 
 function check() {
   const inputValue = document.querySelector(".input").value; // input değerini "inputValue" olarak ayarla
-  if (inputValue == " ") {
+  if (inputValue == "") {
     // Search Bar bos sekilde yonlendirilmesin Kontrolu
-    alert("!!!");
+    showAlertBox();
   } else {
     checkApiForValue(inputValue);
   }
@@ -86,7 +86,7 @@ async function checkApiForValue(inputValue) {
     const data = await response.json();
 
     if (data.meals === null) {
-      showAlertBox(inputValue);
+      showAlertBox();
     } else {
       saveData(inputValue);
       searchbuttonlink.href = "searchResults.html";
@@ -194,9 +194,8 @@ function callRenderMealDataPageIngredients(mealData) {
   // Render HTML dynamically
   containerLeft.innerHTML = `
     <div class="random-image">
-      <img src="${
-        mealData.strMealThumb
-      }" alt="a Reuben sandwich on wax paper" />
+      <img src="${mealData.strMealThumb
+    }" alt="a Reuben sandwich on wax paper" />
     </div>
     <h2 class="container-left-title">Ingredients</h2>
     <div class="ingredients">
@@ -332,9 +331,8 @@ function renderIngredients(mealData) {
   // Render HTML dynamically
   containerLeft.innerHTML = `
     <div class="random-image">
-      <img src="${
-        mealData.strMealThumb
-      }" alt="a Reuben sandwich on wax paper" />
+      <img src="${mealData.strMealThumb
+    }" alt="a Reuben sandwich on wax paper" />
     </div>
     <h2 class="container-left-title">Ingredients</h2>
     <div class="ingredients">
@@ -372,18 +370,14 @@ function renderRecipes(mealdata) {
             </div> `;
 }
 
-const closeButtonPopup = document.querySelector(".close-button-popup");
+const closeButtonPopup = document.querySelector(".");
 closeButtonPopup.addEventListener("click", closeShowPopup);
 
-function showAlertBox(inputValue) {
-  const alertBoxDiv = document.querySelector(".alert-popup");
-  console.log(alertBoxDiv);
-  alertBoxDiv.style.visibility = "visible";
+
+function showAlertBox() {
+  var x = document.getElementById("snackbar");
+  x.className = "show";
+  console.log("erug")
+  setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
 }
 
-function closeShowPopup() {
-  const alertBoxDiv = document.querySelector(".alert-popup");
-
-  console.log(alertBoxDiv);
-  alertBoxDiv.style.visibility = "hidden";
-}

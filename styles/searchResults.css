@@ -13,12 +13,15 @@ body {
 
 .container {
   width: 100%;
-  background: rgba(0, 0, 0, 0.4)
-    url(https://static.vecteezy.com/system/resources/previews/024/444/501/large_2x/table-scene-with-a-selection-of-delicious-foods-top-view-over-a-dark-wood-banner-background-generate-ai-free-photo.jpg);
+  background: url("/img/resultsBackground.jpg"), rgba(0, 0, 0, 0.4);
+  height: 100vh;
   background-blend-mode: darken;
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+
+
 /* ---nav-bar--- */
 
 .nav-container {
@@ -84,6 +87,12 @@ body {
 }
 
 @media screen and (max-width: 1133px) {
+
+  .container {
+    height: 150%;
+  }
+
+
   .nav a {
     display: none;
   }
@@ -117,6 +126,7 @@ body {
     display: flex;
     margin-right: 20px;
   }
+
   .nav {
     height: 9vh;
     width: 85%;
@@ -176,7 +186,7 @@ body {
 }
 
 .results {
-  margin-top: 4rem;
+  margin-top: 15rem;
   display: flex;
   justify-content: center;
   gap: 50px;
@@ -215,15 +225,14 @@ body {
   right: 35px;
   border-radius: 50%;
   cursor: pointer;
-  height: 70px;
-  width: 70px;
+  height: 60px;
+  width: 60px;
   background: #fff;
-  border: 3px solid #333;
+  border: 3px solid #c7c6c6;
   display: none;
   justify-content: center;
   align-items: center;
-  box-shadow: 2px 4px 35px 15px rgba(197, 196, 196, 0.7);
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .go-top-btn img {
@@ -232,8 +241,8 @@ body {
 }
 
 .go-top-btn:hover {
-  height: 80px;
-  width: 80px;
+  height: 65px;
+  width: 65px;
   transition: 0.3s;
   padding: 3rem;
 }
