@@ -71,8 +71,31 @@
         src="https://kit.fontawesome.com/20df13cb09.js"
         crossorigin="anonymous"
       ></script>
+      <script src="https://unpkg.com/scrollreveal"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="js/searchResults.js"></script>
+
+      <script>
+        ScrollReveal({
+          distance: "25rem",
+          duration: 1000,
+          delay: 300,
+        });
+
+        ScrollReveal().reveal(".container-left", {
+          delay: 400,
+          distance: "18px",
+          reset: "true",
+          origin: "left",
+        });
+
+        ScrollReveal().reveal(".container-right", {
+          delay: 400,
+          distance: "18px",
+          reset: "true",
+          origin: "right",
+        });
+      </script>
     </div>
   </body>
 </html>

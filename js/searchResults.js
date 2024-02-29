@@ -43,6 +43,8 @@ goTopBtn.addEventListener("click", () => {
   });
 });
 
+// Scroll Reveal
+
 function closeMenu() {
   var x = document.querySelector(".nav-responsive");
   if (x && x.className === "nav-responsive") {

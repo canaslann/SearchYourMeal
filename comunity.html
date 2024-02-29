@@ -45,7 +45,7 @@
   <!--Content-->
   <section id="content">
     <div class="container">
-      <h1 style="color: whitesmoke; margin: 1rem;">Most popular recipes of the week:</h1>
+      <h1 class="most-title" style="color: whitesmoke; margin: 1rem;">Most popular recipes of the week:</h1>
       <div id="cards" class="clearfix">
         <div class="col">
           <div class="task" draggable="false">
@@ -798,6 +798,26 @@
 
   <!-- Packages -->
   <script src="js/comApp.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    ScrollReveal({
+        distance: "25rem",
+        duration: 1000,
+        delay: 300,
+      });
+
+      ScrollReveal().reveal(".col", {
+        delay: 250,
+        distance: "18px",
+        reset: "true",
+      });
+
+       ScrollReveal().reveal(".most-title", {
+        delay: 250,
+        distance: "18px",
+        reset: "true",
+      });
+  </script>
 </body>
 
 </html>

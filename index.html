@@ -302,11 +302,62 @@
       <img src="img/arrow-up.png" alt="arrow up" />
     </button>
 
-    <!-- Package -->
+    <!-- Packages -->
     <script
       src="https://kit.fontawesome.com/20df13cb09.js"
       crossorigin="anonymous"
     ></script>
+
     <script src="js/app.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+      ScrollReveal({
+        distance: "25rem",
+        duration: 1000,
+        delay: 300,
+      });
+
+      ScrollReveal().reveal(".title", {
+        delay: 250,
+        distance: "18px",
+        reset: "true",
+      });
+
+      ScrollReveal().reveal(".menu__link", {
+        delay: 250,
+        distance: "18px",
+      });
+
+      ScrollReveal().reveal(".daily-title", {
+        delay: 250,
+        distance: "18px",
+        reset: "true",
+      });
+
+      ScrollReveal().reveal(".cards_item", {
+        delay: 250,
+        distance: "18px",
+        reset: "true",
+      });
+
+      ScrollReveal().reveal(".container-left", {
+        delay: 250,
+        distance: "18px",
+        origin: "left",
+      });
+
+      ScrollReveal().reveal(".container-right", {
+        delay: 250,
+        distance: "18px",
+        origin: "right",
+      });
+
+      ScrollReveal().reveal(".right-title", {
+        delay: 250,
+        distance: "18px",
+        origin: "right",
+        reset: "true",
+      });
+    </script>
   </body>
 </html>

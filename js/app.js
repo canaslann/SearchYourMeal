@@ -5,6 +5,8 @@ function scrollToSection(sectionId) {
   section.scrollIntoView({ behavior: "smooth" });
 }
 
+// Scroll Reveal
+
 // Scroll To Top
 
 const goTopBtn = document.querySelector(".go-top-btn");
@@ -133,7 +135,7 @@ async function randomRecipeSectionRender() {
 
 function callRenderMealDataPage(mealData) {
   console.log(mealData.strInstructions.length);
-  if (mealData.strInstructions.length >= 700) {
+  if (mealData.strInstructions.length >= 800) {
     // filtreliyoruz
     const containerRight = document.querySelector(".container-right");
     const containerLeft = document.querySelector(".container-left");
