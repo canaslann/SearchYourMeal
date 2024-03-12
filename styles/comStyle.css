@@ -130,7 +130,7 @@ section {
   opacity: 0.9;
 }
 
-@media screen and (max-width: 1133px) {
+@media screen and (max-width: 1300px) {
   .nav a {
     display: none;
   }
@@ -145,14 +145,14 @@ section {
   display: none;
 }
 
-@media screen and (max-width: 1133px) {
+@media screen and (max-width: 1300px) {
   .logo {
     height: 25vh;
     width: auto;
   }
 }
 
-@media screen and (max-width: 1133px) {
+@media screen and (max-width: 1300px) {
   .logo {
     height: 23vh;
     width: auto;
@@ -293,7 +293,6 @@ section h2 {
   position: relative;
   color: #2e2e2f;
   background-color: #d5d5d5;
-  padding: 1rem;
   border-radius: 8px;
   box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
   margin-bottom: 1rem;
